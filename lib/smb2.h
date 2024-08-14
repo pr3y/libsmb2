@@ -900,4 +900,3 @@ struct smb2_write_reply {
 #endif
 
 #endif /* !_SMB2_H_ */
-

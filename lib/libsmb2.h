@@ -1047,12 +1047,10 @@ int smb2_echo(struct smb2_context *smb2);
 #ifdef __APPLE__
 #include <libsmb2-dcerpc-srvsvc.h>
 #else
-//#include <smb2/libsmb2-dcerpc-srvsvc.h>	
+#include <smb2/libsmb2-dcerpc-srvsvc.h>	
 #endif
 
 #ifdef __cplusplus
 }
 #endif
 #endif /* !_LIBSMB2_H_ */
-
-
