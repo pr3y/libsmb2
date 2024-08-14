@@ -22,7 +22,7 @@
 #ifdef __APPLE__
 #include <smb2-errors.h>
 #else
-//#include <smb2/smb2-errors.h>
+#include <smb2/smb2-errors.h>
 #endif
 
 #ifdef __cplusplus
@@ -900,5 +900,4 @@ struct smb2_write_reply {
 #endif
 
 #endif /* !_SMB2_H_ */
-
 
