@@ -62,8 +62,8 @@
 
 #include "compat.h"
 
-#include "src/modules/wifi/smb2.h"
-#include "src/modules/wifi/libsmb2.h"
+#include "smb2.h"
+#include "libsmb2.h"
 //#include "libsmb2-private.h"
 
 #define container_of(ptr, type, member) ({                      \
