@@ -21,6 +21,8 @@
 #include "config.h"
 #endif
 
+#include <fcntl.h>
+
 #ifndef _GNU_SOURCE
 #define _GNU_SOURCE
 #endif
@@ -129,6 +131,20 @@ const smb2_file_id compound_file_id = {
         0xff, 0xff, 0xff, 0xff,  0xff, 0xff, 0xff, 0xff,
         0xff, 0xff, 0xff, 0xff,  0xff, 0xff, 0xff, 0xff
 };
+
+uint8_t const O_READ = 0x01,                    // open() oflag for reading
+              O_RDONLY = O_READ,                // open() oflag - same as O_IN
+              O_WRITE = 0x02,                   // open() oflag for write
+              O_WRONLY = O_WRITE,               // open() oflag - same as O_WRITE
+              O_RDWR = (O_READ | O_WRITE),      // open() oflag for reading and writing
+              O_ACCMODE = (O_READ | O_WRITE),   // open() oflag mask for access modes
+              O_APPEND = 0x04,                  // The file offset shall be set to the end of the file prior to each write.
+              O_SYNC = 0x08,                    // Synchronous writes - call sync() after each write
+              O_TRUNC = 0x10,                   // Truncate the file to zero length
+              O_AT_END = 0x20,                  // Set the initial position at the end of the file
+              O_CREAT = 0x40,                   // Create the file if nonexistent
+              O_EXCL = 0x80;                    // If O_CREAT and O_EXCL are set, open() shall fail if the file exists
+
 
 struct connect_data {
         smb2_command_cb cb;
