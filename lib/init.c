@@ -406,10 +406,10 @@ static void smb2_set_error_string(struct smb2_context *smb2, const char * error_
 #else
 	if (vsnprintf(errstr, MAX_ERROR_SIZE, error_string, args) < 0) {
 #endif
-			strncpy(errstr, "could not format error string!",
-                        MAX_ERROR_SIZE);
+			//strncpy(errstr, "could not format error string!",
+                        //MAX_ERROR_SIZE);
         }
-        strncpy(smb2->error_string, errstr, MAX_ERROR_SIZE);
+        //strncpy(smb2->error_string, errstr, MAX_ERROR_SIZE);
 }
 #endif /* _IOP */
 
